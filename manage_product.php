@@ -193,7 +193,8 @@
         <div class="navbar-menu">
             <a href="index.php" class="nav-link">หน้าหลัก</a>
             <a href="add_product.php" class="nav-link">เพิ่มสินค้า</a>
-            <a href="manage_product.php" class="nav-link">จัดการสินต้า</a>
+            <a href="manage_product.php" class="nav-link">จัดการสินค้า</a>
+            <a href="order.php" class="nav-link">รายการสั่งสินค้า</a>
             <a href="logout.php" class="nav-link">Logout</a>
         </div>
     </nav>

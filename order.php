@@ -171,7 +171,7 @@
     
     <!-- MAIN CONTAINER -->
     <div class="container">
-        <h2>🦈 รายการสินค้าทั้งหมด</h2>
+        <h2>🦈 รายการสั่งสินค้าทั้งหมด</h2>
 
         <?php
         error_reporting(E_ALL);
@@ -180,29 +180,29 @@
 
         include 'action/connect.php';
 
-        $sql = "SELECT * FROM products";
+        $sql = "SELECT * FROM orders";
         $result = mysqli_query($con,$sql);
         ?>
 
         <table>
             <thead>
                 <tr>
+                    <th>รหัสออเดอร์</th>
                     <th>รหัสสินค้า</th>
-                    <th>ชื่อสินค้า</th>
-                    <th>ราคา</th>
-                    <th>ภาพปก</th>
+                    <th>จำนวน</th>
+                    <th>วันที่</th>
                     
                 </tr>
             </thead>
             <tbody>
                 <?php
-                foreach($result as $products){
+                foreach($result as $orders){
                 ?>
                 <tr>
-                    <td><?= $products["product_id"]?></td>
-                    <td><?= $products["product_name"]?></td>
-                    <td><?= $products["price"]?> บาท</td>
-                    <td><img src="<?= $products["img"]?>" alt=""></td>
+                    <td><?= $orders["order_id"]?></td>
+                    <td><?= $orders["product_id"]?></td>
+                    <td><?= $orders["quantity"]?> ตัว</td>
+                    <td><?= $orders["order_date"]?></td>
                     
                 </tr>
                 <?php
@@ -211,7 +211,7 @@
             </tbody>
         </table>
 
-        <a href="manage_product.php" class="btn-link">จัดการข้อมูลสินค้า</a>
+        
     </div>
 
     <!-- FOOTER -->
