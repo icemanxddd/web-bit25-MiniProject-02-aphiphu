@@ -68,7 +68,7 @@
             color: white;
         }
 
-        /* === CONTAINER (จัดอยู่ตรงกลางแนวตั้งและแนวนอน) === */
+        /* === CONTAINER === */
         .container {
             background: rgba(255, 255, 255, 0.6);
             backdrop-filter: blur(10px);
@@ -79,8 +79,7 @@
             width: 95%;
             max-width: 1000px;
             text-align: center;
-            margin-top: auto;
-            margin-bottom: auto;
+            margin-bottom: 20px; /* ปรับ margin ล่างตามปกติ */
         }
 
         h2 {
@@ -245,7 +244,7 @@
         </table>
 
         <a href="index.php" class="btn-back">กลับหน้าหลัก</a>
-        <a href="add_product.php" class="btn-back">เพิ่มเกม</a>
+        <a href="add_product.php" class="btn-back">เพิ่มสินค้า</a>
     </div>
 
     <!-- FOOTER -->

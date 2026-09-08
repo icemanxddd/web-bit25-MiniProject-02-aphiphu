@@ -22,6 +22,17 @@
             padding: 0;
         }
 
+        .btn-delete {
+            display: inline-block;
+            background-color: #ff6b81;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 15px;
+            text-decoration: none;
+            font-size: 13px;
+            transition: background-color 0.3s;
+        }
+
         body {
             background: linear-gradient(135deg, #ffe6eb, #ffd1dc);
             font-family: Arial, sans-serif;
@@ -85,6 +96,19 @@
             width: 90%;
             max-width: 1000px;
             text-align: center;
+        }
+
+        .btn-back {
+            display: inline-block;
+            background-color: #ff69b4;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: bold;
+            margin: 0 4px;
+            transition: background-color 0.3s;
         }
 
         h2 {
@@ -191,7 +215,7 @@
                     <th>รหัสสินค้า</th>
                     <th>จำนวน</th>
                     <th>วันที่</th>
-                    
+                    <th>จัดการ</th>
                 </tr>
             </thead>
             <tbody>
@@ -203,7 +227,9 @@
                     <td><?= $orders["product_id"]?></td>
                     <td><?= $orders["quantity"]?> ตัว</td>
                     <td><?= $orders["order_date"]?></td>
-                    
+                    <td>
+                    <a href="action/delete_order.php?id=<?= $orders['order_id'] ?>" class="btn-delete" onclick="return confirm('ยืนยันการลบข้อมูล?');">ลบ</a>
+                    </td>
                 </tr>
                 <?php
                 }
@@ -211,7 +237,7 @@
             </tbody>
         </table>
 
-        
+        <a href="add_order.php" class="btn-back">เพิ่มออเดอร์</a>
     </div>
 
     <!-- FOOTER -->
